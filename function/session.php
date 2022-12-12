@@ -1,12 +1,9 @@
 <?php
 session_start();
 
-if(!isset($_SESSION['userID']) || (trim($_SESSION['userID']) == '')){
-	header('location:index.php');
+if (!isset($_SESSION['teacher_id']) || (trim($_SESSION['teacher_id']) == '')) {
+	header('location:./index.php');
 	exit();
 }
 
-$session_id = $_SESSION['userID']; 
-$session_id = $_SESSION['username']; 
-
-?>
+$session_id = $_SESSION['teacher_id'];

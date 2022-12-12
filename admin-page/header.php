@@ -70,7 +70,7 @@
             <label for="switch-mode" class="switch-mode"></label>
             </a>
             <a href="#" class="profile">
-                <img src="luffy.jpg">
+                <img src="luffy.jpg">..
             </a>
         </nav>
         <!-- NAVBAR -->

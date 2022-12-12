@@ -1,6 +1,6 @@
 <?php
-include './function/conn.php';
-include './function/session.php';
+include '../function/conn.php';
+include '../function/session.php';
 
 if (isset($_POST['add'])) {
 
@@ -36,17 +36,51 @@ if (isset($_POST['add'])) {
 </head>
 
 <body>
-	<div id="body">
-		<div id="menu">
-			<ul>
-				<li><a href="home.php">Home</a></li>
-				<li><a href="students.php">Students</a></li>
-				<li><a href="teachers.php">Teachers</a></li>
-				<li><a href="score.php">Scores</a></li>
-				<li><a href="logout.php">Logout</a></li>
-				<li><a href="student_add.php">Add Student</a></li>
-			</ul>
-		</div>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<img src="test.png">
+		</a>
+		<ul class="side-menu top">
+			<li>
+
+				<a href="home.php">
+					<i class='bx bxs-dashboard'></i>
+					<span class="text">Home</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="students.php">
+					<i class='bx bxs-group'></i>
+					<span class="text">Student</span>
+				</a>
+			</li>
+			<li>
+				<a href="teachers.php">
+					<i class='bx bxs-message-alt-dots'></i>
+					<span class="text">Teacher</span>
+				</a>
+			</li>
+
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="../function/logout.php" class="logout">
+					<i class='bx bxs-log-out'></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+	<?php include_once("../navbar/nav.php"); ?>
+	<!--The navbar link-->
+
+	<!-- content -->
+	<div id="main-content">
+		<li><a href="../function/student_add.php">Add Student</a></li> <!-- The link for adding student -->
+
+
 
 		<form action="result.php" method="get" ecntype="multipart/data-form">
 			<table align="center">
@@ -78,8 +112,8 @@ if (isset($_POST['add'])) {
 							<td align="center"><?php echo $row['student_number']; ?></td>
 							<td align="center"><?php echo $row['year']; ?></td>
 							<td align="center"><?php echo $row['section']; ?></td>
-							<td align="center"><a href="./function/edit.php?id=<?php echo md5($row['id']); ?>">Edit
-								</a><a href="./function/delete.php?id=<?php echo md5($row['id']); ?>">Delete</a></td>
+							<td align="center"><a href="../function/edit.php?id=<?php echo md5($row['id']); ?>">Edit
+								</a><a href="../function/delete.php?id=<?php echo md5($row['id']); ?>">Delete</a></td>
 						</tr>
 				<?php
 					}
@@ -92,6 +126,9 @@ if (isset($_POST['add'])) {
 			</table>
 	</div>
 	</div>
+	</section>
+	<script src="script.js"></script>
+
 </body>
 
 </html>

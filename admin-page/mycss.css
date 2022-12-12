@@ -1,8 +1,14 @@
+/*  this is Bsically the content */
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#main-content {
+    margin: 5%;
 }
 
 a {
@@ -45,7 +51,10 @@ body {
 }
 
 
-/* SIDEBAR */
+/* start here is the part of SIDEBAR */
+
+
+/* Navbar can be found below here */
 
 .brand img {
     width: 67px;
